@@ -35,14 +35,11 @@ int main(int argc, char** argv) {
 	struct node* pt;
 	for (pt = head; pt != NULL; pt = pt->ptr) 
 	{
-		//if (pt->data != struct node* insert(int value){
-		//printf("%d\t", pt->data);
 		if (pt->data == pt->data){
 
 			printf("%d\t", pt->data);
 		
-		//for (pt = head; pt != NULL; pt = pt->ptr){	
-		//printf("\t");	
+		
 	}
 	}
 	printf("\n");
@@ -59,37 +56,30 @@ struct node* insert(int value) {
 	}
 	else if ( head->data >= value) {//>
 		struct node* pushin = malloc(sizeof(struct node));
-		//if(head->data == value){
-		//++value;
-		//}
 		pushin->data = value;
 		pushin->ptr = head;
 		size++;
-	      //if (head->data != value)//
 		return pushin;
 	}
-	else if (head->data == value){//
+	else if (head->data == value){
 		return NULL;//
-	}//
+	}
 
 
 		else{ 
 		struct node* point = head;
 		struct node* previous;
 		while (point != NULL) {
-			if (point->data >= value) {//>
+			if (point->data >= value) {
 				struct node* pushin;
-				//if (point->data = value){
-				//return NULL;
-				//}
+			
 				pushin = malloc(sizeof(struct node));
 				pushin->data = value;//=
 				pushin->ptr = previous->ptr;
 				previous->ptr = pushin;
 				size++;
 				return head;
-			//}else if (point->data == value){//
-				//return NULL;//
+			
 			}
 
 			else if (point->data == value) {
